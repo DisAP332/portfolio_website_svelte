@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--BellRed: rgb(240, 37, 37);
+	background-image: url('./lib/assets/images/background.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@font-face {
+	font-family: NameFont1;
+	src: url('./lib/assets/Fonts/Aloevera-OVoWO.ttf');
+}
+@font-face {
+	font-family: NameFont2;
+	src: url('./lib/assets/Fonts/NatureBeautyPersonalUse-9Y2DK.ttf');
+}
+@font-face {
+	font-family: softFont;
+	src: url('./lib/assets/Fonts/SoftSansSerif7-7BDyw.ttf');
+}
+@font-face {
+	font-family: fancyFont;
+	src: url('./lib/assets/Fonts/KrinkesDecorPERSONAL.ttf');
+}
+.coolFont {
+	font-family: nameFont2;
+}
+
+.headingCenter {
+	@apply mt-3;
+	display: grid;
+	grid-template-columns: 1fr 10rem 1fr;
+}
+.headingCenter > div {
+	@apply flex justify-center items-center;
+	text-align: center;
+}
+/* ------ background ------ */
+.transparentBackground {
+	background-color: rgba(0, 0, 0, 0.304);
+	@apply p-2 rounded-md shadow-lg;
+}
+.horizontalLine {
+	background-color: var(--BellRed);
+	width: 100%;
+	height: 6px;
+	border-radius: 5px;
+}
+.visabilityHelper {
+	@apply rounded-lg;
+	box-shadow: 0px 1px 40px 10px rgba(215, 154, 250, 0.501) inset;
+}
