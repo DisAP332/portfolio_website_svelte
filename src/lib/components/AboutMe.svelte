@@ -1,5 +1,5 @@
-<div class="transparentBackground">
-	<div class="headingCenter">
+<div class="transparentBackground lgStyling">
+	<div class="headingCenter largeMiddle">
 		<div>
 			<div class="horizontalLine" />
 		</div>
@@ -19,9 +19,12 @@
 	</p>
 </div>
 
-<style>
+<style lang="postcss">
+	.lgStyling {
+		@apply lg:pt-1 pb-14;
+	}
 	h1 {
-		@apply text-2xl;
+		@apply text-2xl lg:text-5xl !important;
 		color: white;
 	}
 	p {

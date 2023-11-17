@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.lg_middle {
+		grid-template-columns: 1fr 20rem 1fr;
+	}
+}
+
 :root {
 	--BellRed: rgb(240, 37, 37);
 	background-image: url('./lib/assets/images/background.svg');
@@ -28,9 +34,11 @@
 .coolFont {
 	font-family: nameFont2;
 }
-
+.largeMiddle {
+	@apply lg:grid-cols-lg_middle !important;
+}
 .headingCenter {
-	@apply mt-3;
+	margin-top: 3rem;
 	display: grid;
 	grid-template-columns: 1fr 10rem 1fr;
 }
@@ -52,4 +60,22 @@
 .visabilityHelper {
 	@apply rounded-lg;
 	box-shadow: 0px 1px 40px 10px rgba(215, 154, 250, 0.501) inset;
+}
+.subHead {
+	text-align: center;
+	font-family: coolFont;
+	color: white;
+	@apply flex justify-center items-center;
+}
+.subHead > div {
+	@apply mt-1;
+	padding-top: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 3px solid var(--BellRed);
+	border-bottom: 0px !important;
+}
+.badgeVisabilityHelper {
+	@apply bg-white rounded-md;
+	padding: 2px;
 }

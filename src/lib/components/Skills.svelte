@@ -29,11 +29,11 @@
 <div class="headBottom"><h1>... I would like to one day be!</h1></div>
 <h1 class="skillsTitle fancyFont">Some skills I use and continue to try to master.</h1>
 <div class="transparentBackground mb-20">
-	<div class="skillHeading">
+	<div class="skillHeading largeLeft">
 		<div>
-			<h1 class="coolFont text-2xl mr-5">Front End</h1>
+			<h1 class="skillTitle coolFont text-2xl mr-5">Front End</h1>
 		</div>
-		<div>
+		<div class="flex items-center">
 			<div class="horizontalLine" />
 		</div>
 	</div>
@@ -61,12 +61,13 @@
 			><img src={bootstrapIcon} alt="bootstrap Icon" class="badgeVisabilityHelper" /></a
 		>
 	</div>
-	<div class="skillHeadingReverse">
+	<div class="skillHeadingReverse largeRight">
+		<div class="smHide" />
 		<div>
 			<div class="horizontalLine" />
 		</div>
-		<div>
-			<h1 class="coolFont text-2xl ml-5">Back End</h1>
+		<div class="backend">
+			<h1 class="skillTitle coolFont text-xl ml-5">Back End</h1>
 		</div>
 	</div>
 	<div class="skillBadges visabilityHelper justify-end">
@@ -86,12 +87,12 @@
 			><img src={pugIcon} alt="react Icon" /></a
 		>
 	</div>
-	<div class="headingCenter">
+	<div class="headingCenter largeMiddle">
 		<div>
 			<div class="horizontalLine" />
 		</div>
 		<div>
-			<h1 class="coolFont text-2xl">Technologies</h1>
+			<h1 class=" skillTitle coolFont text-2xl">Technologies</h1>
 		</div>
 		<div>
 			<div class="horizontalLine" />
@@ -121,13 +122,14 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	h1 {
 		color: white;
 	}
 	/* ---- fonts ----- */
 	.softText {
-		@apply text-xl;
+		margin-top: 10vh;
+		@apply text-xl lg:text-4xl;
 		font-family: softFont;
 	}
 	.fancyFont {
@@ -142,13 +144,17 @@
 		@apply mt-3;
 		display: grid;
 		grid-template-columns: 1fr 10rem;
+		grid-template-rows: 1fr;
+	}
+	.backend {
+		grid-column: 3 / 4;
 	}
 	.skillHeadingReverse > div,
 	.headingCenter > div {
 		@apply flex justify-center items-center;
 	}
 	.headBottom {
-		@apply flex justify-end mt-3 text-lg;
+		@apply flex justify-end mt-3 text-lg lg:text-3xl;
 		font-family: NameFont1;
 		text-decoration: underline;
 		text-decoration-color: white;
@@ -156,28 +162,51 @@
 	}
 	/* ------- skills title ----- */
 	.skillsTitle {
-		@apply text-xl mt-10 mb-3;
+		@apply text-xl mt-10 mb-3 lg:text-2xl;
+	}
+	.skillTitle {
+		@apply lg:text-5xl;
 	}
 	/* ------- skills body ----- */
 	.skillBadges {
+		@apply lg:mt-8;
 		display: flex;
 		gap: 1rem;
 		padding: 10px;
 		width: 100%;
 		overflow: scroll;
+		overflow-y: hidden;
 		/* background-color: rgba(214, 154, 250, 0.415); */
 	}
-	.badgeVisabilityHelper {
-		@apply bg-white rounded-md;
-		padding: 2px;
+	.skillBadges::-webkit-scrollbar {
+		background-color: rgba(255, 255, 255, 0);
+		height: 1vh;
+	}
+	.skillBadges::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		background-color: #c6a0fe;
+		border: 1px solid #000;
 	}
 	/* ------ icons ----- */
 	a {
+		@apply lg:h-20 w-20 !important;
 		width: 40px;
 		height: 40px;
 	}
 	img {
+		@apply lg:h-20 w-20 !important;
 		min-width: 40px;
 		height: 40px;
+	}
+	/* ------ lg styling ------- */
+	.largeLeft {
+		@apply lg:grid-cols-lg_left pt-4 ml-3 !important;
+	}
+	.largeRight {
+		@apply lg:grid-cols-lg_right mt-10 !important;
+	}
+	.smHide {
+		@apply hidden lg:block;
 	}
 </style>

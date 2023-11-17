@@ -7,7 +7,7 @@
 </script>
 
 <div class="transparentBackground mt-20">
-	<div class="headingCenter">
+	<div class="headingCenter largeMiddle largeStyling">
 		<div>
 			<div class="horizontalLine" />
 		</div>
@@ -16,6 +16,11 @@
 		</div>
 		<div>
 			<div class="horizontalLine" />
+		</div>
+	</div>
+	<div class="subHead mt-1">
+		<div class="visabilityHelper">
+			<p>Most not mobile friendly. May revisit in the future.</p>
 		</div>
 	</div>
 	<div class="gamesContainer visabilityHelper">
@@ -27,13 +32,16 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.gamesContainer {
 		@apply flex justify-center mt-3;
 		flex-wrap: wrap;
 	}
 	h1 {
-		@apply text-3xl;
+		@apply text-3xl lg:text-5xl;
 		color: white;
+	}
+	.largeStyling {
+		@apply lg:pt-1 pb-2;
 	}
 </style>
