@@ -8,15 +8,5 @@
 		"game_name": "EtchASketch",
 		"code_link": "https://github.com/DisAP332/etchASketch",
 		"game_link": "https://disap332.github.io/etchASketch/"
-	},
-	{
-		"game_name": "Battleship",
-		"code_link": "https://github.com/DisAP332/battleship",
-		"game_link": "https://github.com/DisAP332/battleship"
-	},
-	{
-		"game_name": "R-P-S",
-		"code_link": "https://github.com/DisAP332/rockPaperScissors/tree/addingUI",
-		"game_link": "https://disap332.github.io/rockPaperScissors/"
 	}
 ]

@@ -12,12 +12,13 @@
 	import portalfiVideo from '$lib/assets/video/portalvid.mp4';
 	import { onMount } from 'svelte';
 
-	let LottiePlayer;
+	import VideoPlayer from 'svelte-video-player';
+	// let VideoPlayer;
 
-	onMount(async () => {
-		const module = await import('svelte-video-player');
-		VideoPlayer = module.VideoPlayer;
-	});
+	// onMount(async () => {
+	// 	const module = await import('svelte-video-player');
+	// 	VideoPlayer = module.VideoPlayer;
+	// });
 </script>
 
 <div class="transparentBackground mt-20 mb-20">
@@ -49,13 +50,13 @@
 			<div class="horizontalLine" />
 		</div>
 	</div>
-	<!-- <VideoPlayer width="500" height="300" source={portalfiVideo} loop /> -->
+	<VideoPlayer width="500" height="300" source={portalfiVideo} loop />
 	<div class="underline" />
 	<div>
 		<h3>Tech used:</h3>
 		<div class="badgeCont visabilityHelper p-3">
 			<img src={nextIcon} alt="next Icon" class="badgeVisabilityHelper" />
-			<img src={reduxIcon} alt="redux Icon" />
+			<img src={reduxIcon} alt="redux Icon" class="badgeVisabilityHelper" />
 			<img src={typescriptIcon} alt="typescript Icon" />
 			<img src={nodejsIcon} alt="nodejs Icon" class="badgeVisabilityHelper" />
 			<img src={expressIcon} alt="express Icon" class="badgeVisabilityHelper" />
@@ -122,6 +123,7 @@
 	.badgeCont {
 		@apply flex items-center;
 		padding: 20px;
+		overflow-y: hidden;
 		overflow-x: auto;
 		height: 70px;
 		gap: 10px;
