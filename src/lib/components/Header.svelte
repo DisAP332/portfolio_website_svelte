@@ -81,7 +81,6 @@
 		height: 8.5vh;
 		display: flex;
 		justify-content: space-evenly;
-		position: fixed;
 		width: 100vw;
 		border-bottom: 3px solid rgb(0, 92, 92);
 	}

@@ -38,7 +38,7 @@
 	@apply lg:grid-cols-lg_middle !important;
 }
 .headingCenter {
-	margin-top: 3rem;
+	@apply mt-6;
 	display: grid;
 	grid-template-columns: 1fr 10rem 1fr;
 }

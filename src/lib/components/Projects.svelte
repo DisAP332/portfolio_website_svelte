@@ -11,17 +11,10 @@
 
 	import portalfiVideo from '$lib/assets/video/portalvid.mp4';
 	import { onMount } from 'svelte';
-
-	import VideoPlayer from 'svelte-video-player';
-	// let VideoPlayer;
-
-	// onMount(async () => {
-	// 	const module = await import('svelte-video-player');
-	// 	VideoPlayer = module.VideoPlayer;
-	// });
+	import { browser } from '$app/environment';
 </script>
 
-<div class="transparentBackground mt-20 mb-20">
+<div class="transparentBackground mt-20 mb-20" id="projects">
 	<div class="headingCenter largeMiddle">
 		<div>
 			<div class="horizontalLine" />
@@ -50,7 +43,12 @@
 			<div class="horizontalLine" />
 		</div>
 	</div>
-	<VideoPlayer width="500" height="300" source={portalfiVideo} loop />
+	<!-- <VideoPlayer width="500" height="300" source={portalfiVideo} loop /> -->
+	<div class="flex justify-center">
+		<video width="800" height="600" controls loop muted>
+			<source src={portalfiVideo} type="video/mp4" />
+		</video>
+	</div>
 	<div class="underline" />
 	<div>
 		<h3>Tech used:</h3>

@@ -37,7 +37,7 @@
 		flex-wrap: wrap;
 	}
 	h1 {
-		@apply text-3xl lg:text-4xl mb-3;
+		@apply text-5xl lg:text-5xl mb-3;
 		color: white;
 	}
 	.headingCenterLP {

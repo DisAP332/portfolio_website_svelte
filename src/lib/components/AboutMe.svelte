@@ -24,7 +24,7 @@
 		@apply lg:pt-1 pb-14;
 	}
 	h1 {
-		@apply text-2xl lg:text-5xl !important;
+		@apply text-5xl lg:text-6xl !important;
 		color: white;
 	}
 	p {

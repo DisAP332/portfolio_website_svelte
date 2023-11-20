@@ -6,7 +6,7 @@
 	console.log(GamesData);
 </script>
 
-<div class="transparentBackground mt-20">
+<div class="transparentBackground mt-20" id="games">
 	<div class="headingCenter largeMiddle largeStyling">
 		<div>
 			<div class="horizontalLine" />
@@ -38,7 +38,7 @@
 		flex-wrap: wrap;
 	}
 	h1 {
-		@apply text-3xl lg:text-5xl;
+		@apply text-5xl lg:text-6xl;
 		color: white;
 	}
 	.largeStyling {

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import htmlIcon from '$lib/assets/Icons/html5.svg';
 	import cssIcon from '$lib/assets/Icons/css3.svg';
 	import javascriptIcon from '$lib/assets/Icons/javascript.svg';
@@ -26,8 +26,12 @@
 </script>
 
 <h1 class="softText">Software Extraordinaire?</h1>
-<div class="headBottom"><h1>... I would like to one day be!</h1></div>
-<h1 class="skillsTitle fancyFont">Some skills I use and continue to try to master.</h1>
+<div class="headBottom">
+	<h1>... I would like to one day be! <br /> Let me be your next junior developer!</h1>
+</div>
+<h1 id="knowledge" class="skillsTitle fancyFont">
+	Some skills I use and continue to try to master.
+</h1>
 <div class="transparentBackground mb-20">
 	<div class="skillHeading largeLeft">
 		<div>
@@ -128,7 +132,6 @@
 	}
 	/* ---- fonts ----- */
 	.softText {
-		margin-top: 10vh;
 		@apply text-xl lg:text-4xl;
 		font-family: softFont;
 	}
@@ -156,9 +159,10 @@
 	.headBottom {
 		@apply flex justify-end mt-3 text-lg lg:text-3xl;
 		font-family: NameFont1;
-		text-decoration: underline;
+		/* text-decoration: underline;
 		text-decoration-color: white;
-		text-decoration-thickness: 2px;
+		text-decoration-thickness: 2px; */
+		text-align: right;
 	}
 	/* ------- skills title ----- */
 	.skillsTitle {
