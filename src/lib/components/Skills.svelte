@@ -197,6 +197,11 @@
 		@apply lg:h-20 w-20 !important;
 		width: 40px;
 		height: 40px;
+		transition-duration: 0.4s;
+	}
+	a:hover {
+		transform: translateY(-10px);
+		transition-duration: 0.3s;
 	}
 	img {
 		@apply lg:h-20 w-20 !important;

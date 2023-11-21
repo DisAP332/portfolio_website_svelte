@@ -9,6 +9,8 @@
 	import gitHubLottie from '$lib/assets/lotties/github-2.json';
 	import linkedInLottie from '$lib/assets/lotties/linkedin.json';
 	import logo from '$lib/assets/images/FullLogo_Transparent.png';
+	import resumeIcon from '$lib/assets/Icons/resume.svg';
+	import resume from '$lib/assets/JordanBellPortfolio.pdf';
 </script>
 
 <nav>
@@ -70,7 +72,12 @@
 				/>
 			{/if}
 		</a>
-		<button class="hireMeButton">Hire me?</button>
+		<a href="mailto: disap332@gmail.com">
+			<button class="hireMeButton">Hire me?</button>
+		</a>
+		<a href={resume} download="Jordan_Bell_Resume">
+			<img src={resumeIcon} alt="resume" class="logo mt-4" />
+		</a>
 	</div>
 </nav>
 
