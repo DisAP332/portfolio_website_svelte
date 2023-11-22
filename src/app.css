@@ -8,6 +8,15 @@
 	}
 }
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.6;
+	}
+}
+
 :root {
 	--BellRed: rgb(240, 37, 37);
 	background-image: url('./lib/assets/images/background.svg');

@@ -2,8 +2,6 @@
 	import Game from './Game.svelte';
 	import GamesDataJSON from '$lib/gamesData.json';
 	let GamesData: Array<object> = GamesDataJSON;
-
-	console.log(GamesData);
 </script>
 
 <div class="transparentBackground mt-20" id="games">

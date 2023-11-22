@@ -1,4 +1,10 @@
-<footer></footer>
+<script>
+	let dateYear = new Date().getFullYear();
+</script>
+
+<footer>
+	<p>Jordan Bell Web Dev @{dateYear}</p>
+</footer>
 
 <style>
 	footer {
@@ -6,6 +12,7 @@
 		background-color: teal;
 		height: 8.5vh;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
+		align-items: center;
 	}
 </style>

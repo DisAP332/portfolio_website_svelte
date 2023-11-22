@@ -2,7 +2,6 @@
 	import Project from './LProject.svelte';
 	import lProjectsDataJSON from '$lib/lProjectsData.json';
 	let projectsData: Array<object> = lProjectsDataJSON;
-	console.log(projectsData);
 </script>
 
 <div class="transparentBackground mt-20">
