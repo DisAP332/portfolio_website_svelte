@@ -8,5 +8,10 @@
 		"game_name": "EtchASketch",
 		"code_link": "https://github.com/DisAP332/etchASketch",
 		"game_link": "https://disap332.github.io/etchASketch/"
+	},
+	{
+		"game_name": "BattleShip",
+		"code_link": "https://github.com/DisAP332/battleship",
+		"game_link": "https://disap332.github.io/battleship/"
 	}
 ]
