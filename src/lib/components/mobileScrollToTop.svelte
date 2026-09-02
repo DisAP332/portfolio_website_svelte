@@ -1,18 +1,18 @@
 <script lang="ts">
+	import upArrow from '$lib/assets/Icons/up-arrow.svg';
+
 	export let showScrollToTop: boolean;
 	let showOrHide = 'hide';
-	$: if (showScrollToTop === true) {
-		showOrHide = 'show';
-	} else {
-		showOrHide = 'hide';
-	}
 
-	import upArrow from '$lib/assets/Icons/up-arrow.svg';
-	import { animateScroll } from 'svelte-scrollto-element';
+	$: showOrHide = showScrollToTop ? 'show' : 'hide';
+
+	function scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 </script>
 
-<button class="scrollToTopButton {showOrHide}" on:click={() => animateScroll.scrollToTop()}>
-	<img src={upArrow} alt="up arrow" />
+<button class="scrollToTopButton {showOrHide}" on:click={scrollToTop} aria-label="Scroll to top">
+	<img src={upArrow} alt="" />
 </button>
 
 <style lang="postcss">
@@ -34,14 +34,14 @@
 	}
 	.show {
 		animation: fadeIn 0.2s ease-in-out;
-
 		display: block;
 	}
 	.hide {
-		animation: fadOut 0.2s ease-in-out;
+		animation: fadeOut 0.2s ease-in-out;
 		opacity: 0;
+		pointer-events: none;
 	}
-	@keyframes fadein {
+	@keyframes fadeIn {
 		from {
 			opacity: 0;
 		}
@@ -49,7 +49,7 @@
 			opacity: 1;
 		}
 	}
-	@keyframes fadeout {
+	@keyframes fadeOut {
 		from {
 			opacity: 1;
 		}
