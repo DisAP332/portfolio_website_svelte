@@ -2,8 +2,8 @@
 	const projects = [
 		{
 			title: 'HireMePWES',
-			tagline: 'A real service business site built to turn technical and local service work into paying clients.',
-			description: 'A full-stack service platform for cleaning, computer and phone repair, custom technical help and other local services. Built around practical booking and administration instead of being a demo-only project.',
+			tagline: 'My service website for local work and technical help.',
+			description: 'I built this as a real site for the work I offer, including cleaning, computer and phone repair, and custom technical help. It gave me a place to put the web skills I learned into something I could actually use for myself.',
 			tech: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Prisma', 'PostgreSQL', 'Vercel'],
 			links: [
 				{ label: 'Live site', href: 'https://hiremepwes.com' },
@@ -12,8 +12,8 @@
 		},
 		{
 			title: 'Portalfi / Live Menu Editor',
-			tagline: 'A custom content-management tool created for restaurant and bar websites.',
-			description: 'I built a client/server application so non-technical users could create, edit and delete live website data such as menu items, events and contact information. It taught me authentication, APIs, databases, deployment and maintaining a real application across multiple layers.',
+			tagline: 'A content editor I made for restaurant and bar websites.',
+			description: 'I wanted someone without coding experience to be able to change the information on their own site. I made a client and server that let them add, edit and remove things like menu items, events and contact information. This was where I learned a lot about authentication, APIs, databases and deployment.',
 			tech: ['TypeScript', 'Node.js', 'Next.js', 'MongoDB', 'Redux', 'DigitalOcean', 'Nginx', 'JWT'],
 			links: [
 				{ label: 'Server code', href: 'https://github.com/DisAP332/Portalfi-Server' },
@@ -22,15 +22,15 @@
 		},
 		{
 			title: 'Home Lab & Network',
-			tagline: 'My hands-on environment for learning systems, networking, virtualization and security.',
-			description: 'I use Linux systems, Proxmox VE, KVM/QEMU, OpenWrt, WireGuard and SSH to build and troubleshoot virtual machines, networks and self-hosted services. The lab gives me a place to test configuration, automation and security concepts instead of only reading about them.',
+			tagline: 'The setup I use at home to learn systems and networking by doing it myself.',
+			description: 'I use Linux, Proxmox, virtual machines, OpenWrt, WireGuard and SSH to experiment with networks and self-hosted services. It gives me somewhere to try things, break things, fix them and understand what is happening instead of only reading about it.',
 			tech: ['Proxmox', 'Linux', 'OpenWrt', 'WireGuard', 'KVM/QEMU', 'SSH', 'Ansible', 'Cloud-Init'],
 			links: []
 		},
 		{
 			title: 'Food Security Flow',
-			tagline: 'A mutual-aid focused project for making food resources easier to find and use.',
-			description: 'A community-minded web project built around organizing useful food-security information into something easier for people to navigate. It reflects what I like most about software: using technical skills to solve ordinary, real-world problems.',
+			tagline: 'A mutual-aid project built around making food resources easier to find.',
+			description: 'I made this around an issue I care about: people being able to find useful food resources without digging through scattered information. I like projects where the technical part has a clear purpose for the person using it.',
 			tech: ['Web development', 'Information design', 'Community resources', 'UX'],
 			links: []
 		}
