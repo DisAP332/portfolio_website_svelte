@@ -1,16 +1,16 @@
 [
 	{
-		"game_name": "Tik Tac Toe",
+		"game_name": "Tic Tac Toe",
 		"code_link": "https://github.com/DisAP332/ticTakToe",
 		"game_link": "https://disap332.github.io/ticTakToe/"
 	},
 	{
-		"game_name": "EtchASketch",
+		"game_name": "Etch-a-Sketch",
 		"code_link": "https://github.com/DisAP332/etchASketch",
 		"game_link": "https://disap332.github.io/etchASketch/"
 	},
 	{
-		"game_name": "BattleShip",
+		"game_name": "Battleship",
 		"code_link": "https://github.com/DisAP332/battleship",
 		"game_link": "https://disap332.github.io/battleship/"
 	}
