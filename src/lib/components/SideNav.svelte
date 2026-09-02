@@ -4,23 +4,34 @@
 	import knowledgeIcon from '$lib/assets/Icons/creative-book.svg';
 	import projectsIcon from '$lib/assets/Icons/checkmark.svg';
 	import gameIcon from '$lib/assets/Icons/game.svg';
-	import { animateScroll } from 'svelte-scrollto-element';
+
+	function scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
+	function scrollToSection(selector: string) {
+		document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
+
+	function scrollToBottom() {
+		window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+	}
 </script>
 
 <div class="sideNavigation">
-	<button on:click={() => animateScroll.scrollToTop()}>
+	<button on:click={scrollToTop}>
 		<img src={upArrow} alt="up arrow" /><h1>Top</h1>
 	</button>
-	<button on:click={() => animateScroll.scrollTo({ element: '#knowledge' })}>
+	<button on:click={() => scrollToSection('#knowledge')}>
 		<img src={knowledgeIcon} alt="skills section" /><h1>Skills</h1>
 	</button>
-	<button on:click={() => animateScroll.scrollTo({ element: '#projects' })}>
+	<button on:click={() => scrollToSection('#projects')}>
 		<img src={projectsIcon} alt="project section" /><h1>Projects</h1>
 	</button>
-	<button on:click={() => animateScroll.scrollTo({ element: '#games' })}>
+	<button on:click={() => scrollToSection('#games')}>
 		<img src={gameIcon} alt="games section" /><h1>Games</h1>
 	</button>
-	<button on:click={() => animateScroll.scrollToBottom()}>
+	<button on:click={scrollToBottom}>
 		<img src={downArrow} alt="down arrow" /><h1>Bottom</h1>
 	</button>
 </div>
