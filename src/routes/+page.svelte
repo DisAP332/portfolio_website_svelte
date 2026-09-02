@@ -9,8 +9,6 @@
 	import SideNav from '$lib/components/SideNav.svelte';
 	import MobileScrollToTop from '$lib/components/mobileScrollToTop.svelte';
 
-	// for some reason this only works here. If we put in the mobileScrollToTop.svelte file it doesn't work
-	// we will get a warning "not implemented undefined"
 	let showScrollToTop = false;
 
 	if (typeof window !== 'undefined') {
@@ -29,24 +27,17 @@
 		let pctScrolled: number;
 
 		function amountScrolled() {
-			let winheight =
-				window.innerHeight || (document.documentElement || document.body).clientHeight;
+			let winheight = window.innerHeight || (document.documentElement || document.body).clientHeight;
 			let docheight = getDocHeight();
-			let scrollTop =
-				window.pageYOffset ||
-				(document.documentElement || document.body.parentNode || document.body).scrollTop;
+			let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 			let trackLength = docheight - winheight;
-			pctScrolled = Math.floor((scrollTop / trackLength) * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+			pctScrolled = Math.floor((scrollTop / trackLength) * 100);
 		}
 
 		function scroll() {
 			amountScrolled();
-			if (pctScrolled > 20 && showScrollToTop === false) {
-				showScrollToTop = true;
-			}
-			if (pctScrolled < 20 && showScrollToTop === true) {
-				showScrollToTop = false;
-			}
+			if (pctScrolled > 20 && showScrollToTop === false) showScrollToTop = true;
+			if (pctScrolled < 20 && showScrollToTop === true) showScrollToTop = false;
 		}
 		window.addEventListener('scroll', scroll);
 	}
@@ -59,16 +50,15 @@
 <div class="body-margin">
 	<Skills />
 	<AboutMe />
-	<Games />
-	<Learning />
 	<Projects />
+	<Learning />
+	<Games />
 </div>
 <Footer />
 
 <style lang="postcss">
 	.body-margin {
-		@apply lg:ml-10vw;
-		@apply lg:mr-10vw;
+		@apply lg:ml-10vw lg:mr-10vw;
 		padding-top: 5vh;
 		padding-left: 5vw;
 		padding-right: 5vw !important;
