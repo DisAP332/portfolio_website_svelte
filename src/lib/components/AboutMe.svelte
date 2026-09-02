@@ -8,25 +8,24 @@
 	<div class="aboutGrid visabilityHelper">
 		<div>
 			<p>
-				I am a hands-on technologist who likes figuring out why things fail and making them work again.
-				My background has grown from web development into server and hardware diagnostics, IT support,
-				Linux systems, networking, cybersecurity, automation, and building useful software.
+				I like working with technology from more than one angle. I build software, troubleshoot computers and servers,
+				work with Linux and networks, and spend a lot of my own time learning how the pieces connect.
 			</p>
 			<p>
-				I have worked on production server hardware, diagnosed failures across dozens of systems at once,
-				deployed and upgraded hundreds of workstations, supported users, built full-stack web applications,
-				and created my own home-lab infrastructure to keep learning outside of work.
+				A lot of what I know came from having a problem in front of me and needing to figure it out. I have diagnosed
+				production server hardware, upgraded hundreds of workstations, supported users, built full-stack web apps,
+				and put together my own home lab so I always have something new to work on.
 			</p>
 		</div>
 		<div class="quickFacts">
-			<h2>What I bring</h2>
+			<h2>A few things about my work</h2>
 			<ul>
 				<li>CompTIA A+</li>
 				<li>Google Cybersecurity Professional Certificate</li>
-				<li>Hardware + software troubleshooting</li>
-				<li>Linux, networking + virtualization</li>
-				<li>Full-stack development + automation</li>
-				<li>A habit of learning by building</li>
+				<li>Hardware and software troubleshooting</li>
+				<li>Linux, networking and virtualization</li>
+				<li>Full-stack development and automation</li>
+				<li>I learn best by building and fixing things</li>
 			</ul>
 		</div>
 	</div>
