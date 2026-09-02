@@ -1,221 +1,79 @@
 <script lang="ts">
-	import htmlIcon from '$lib/assets/Icons/html5.svg';
-	import cssIcon from '$lib/assets/Icons/css3.svg';
-	import javascriptIcon from '$lib/assets/Icons/javascript.svg';
-	import reactIcon from '$lib/assets/Icons/react.svg';
-	import bootstrapIcon from '$lib/assets/Icons/bootstrap.svg';
-	import typescriptIcon from '$lib/assets/Icons/typescript.svg';
-	import nodejsIcon from '$lib/assets/Icons/nodejs.svg';
-	import expressIcon from '$lib/assets/Icons/express.svg';
-	import pugIcon from '$lib/assets/Icons/pug-is-wearing-hat-and-sunglasses.svg';
-	import mongodbIcon from '$lib/assets/Icons/mongodb.svg';
-	import gitIcon from '$lib/assets/Icons/git.svg';
-	import githubIcon from '$lib/assets/Icons/github.svg';
-	import firebaseIcon from '$lib/assets/Icons/firebase.svg';
-	import webpackIcon from '$lib/assets/Icons/webpack.svg';
-	import adobeIllustratorIcon from '$lib/assets/Icons/adobe-illustrator.svg';
-	import linuxIcon from '$lib/assets/Icons/linux.svg';
-	import nextIcon from '$lib/assets/Icons/next-js-seeklogo.com.svg';
-	import viteIcon from '$lib/assets/Icons/vite-svgrepo-com.svg';
-	import tailwindIcon from '$lib/assets/Icons/tailwind-css.svg';
-	import reduxIcon from '$lib/assets/Icons/redux.svg';
-	import jestIcon from '$lib/assets/Icons/jest-snapshot-svgrepo-com.svg';
-	import letsencryptIcon from '$lib/assets/Icons/letsencrypt.svg';
-	import digitalOceanIcon from '$lib/assets/Icons/digitalocean.svg';
-	import nginxIcon from '$lib/assets/Icons/nginx.svg';
+	const skillGroups = [
+		{
+			title: 'Hardware & Diagnostics',
+			items: ['Server diagnostics', 'Component replacement', 'Log analysis', 'Firmware troubleshooting', 'Multimeter use', 'Board inspection', 'Workstation repair']
+		},
+		{
+			title: 'IT Support',
+			items: ['Windows support', 'ServiceNow', 'Active Directory', 'PC imaging', 'User support', 'Desktop deployment', 'Hardware / software triage']
+		},
+		{
+			title: 'Networking & Systems',
+			items: ['TCP/IP', 'Ethernet', 'OpenWrt', 'WireGuard', 'SSH', 'Proxmox VE', 'KVM / QEMU', 'Ubuntu / Debian', 'DigitalOcean', 'Nginx']
+		},
+		{
+			title: 'Cybersecurity',
+			items: ['CompTIA A+', 'Google Cybersecurity Certificate', 'Access control', 'Authentication', 'Linux security fundamentals', 'Network security fundamentals', 'Security troubleshooting']
+		},
+		{
+			title: 'Development',
+			items: ['TypeScript', 'JavaScript', 'React', 'Next.js', 'SvelteKit', 'Node.js', 'Fastify / Express', 'Tailwind CSS', 'Prisma', 'Python', 'REST APIs']
+		},
+		{
+			title: 'Automation & Tooling',
+			items: ['Git / GitHub', 'Vite', 'Playwright', 'Puppeteer', 'Ansible', 'Cloud-Init', 'Docker concepts', 'Deployment workflows', 'Self-hosting']
+		}
+	];
 </script>
 
-<h1 class="softText">Software Extraordinaire?</h1>
-<div class="headBottom">
-	<h1>... I would like to one day be! <br /> Let me be your next junior developer!</h1>
-</div>
-<h1 id="knowledge" class="skillsTitle fancyFont">
-	Some skills I use and continue to try to master.
-</h1>
-<div class="transparentBackground mb-20">
-	<div class="skillHeading largeLeft">
-		<div>
-			<h1 class="skillTitle coolFont text-2xl mr-5">Front End</h1>
-		</div>
-		<div class="flex items-center">
-			<div class="horizontalLine" />
+<section id="knowledge">
+	<div class="hero transparentBackground">
+		<p class="eyebrow">TECHNICAL GENERALIST • TROUBLESHOOTER • BUILDER</p>
+		<h1 class="softText">I like finding the failure, understanding it, and fixing it.</h1>
+		<p class="heroCopy">
+			My work now spans hardware diagnostics, IT support, Linux, networking, cybersecurity and software development.
+			I learn best by building things, breaking them, and understanding exactly why they work.
+		</p>
+		<div class="focusRow">
+			<span>Systems</span><span>Diagnostics</span><span>Networking</span><span>Security</span><span>Software</span>
 		</div>
 	</div>
-	<div class="skillBadges visabilityHelper">
-		<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="_blank"
-			><img src={htmlIcon} alt="html icon" /></a
-		>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
-			><img src={cssIcon} alt="css icon" /></a
-		>
-		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
-			><img src={javascriptIcon} alt="js icon" /></a
-		>
-		<a href="https://www.typescriptlang.org/" target="_blank"
-			><img src={typescriptIcon} alt="typescript Icon" /></a
-		>
-		<a href="https://reactjs.org/" target="_blank"><img src={reactIcon} alt="react Icon" /></a>
-		<a href="https://nextjs.org/" target="_blank"
-			><img src={nextIcon} alt="next Icon" class="badgeVisabilityHelper" /></a
-		>
-		<a href="https://tailwindcss.com/" target="_blank"
-			><img src={tailwindIcon} alt="tailwind Icon" class="badgeVisabilityHelper" /></a
-		>
-		<a href="https://getbootstrap.com/" target="_blank"
-			><img src={bootstrapIcon} alt="bootstrap Icon" class="badgeVisabilityHelper" /></a
-		>
+
+	<div class="headingCenter largeMiddle sectionHeading">
+		<div><div class="horizontalLine" /></div>
+		<div><h1 class="coolFont">Skills & Tools</h1></div>
+		<div><div class="horizontalLine" /></div>
 	</div>
-	<div class="skillHeadingReverse largeRight">
-		<div class="smHide" />
-		<div>
-			<div class="horizontalLine" />
-		</div>
-		<div class="backend">
-			<h1 class="skillTitle coolFont text-xl ml-5">Back End</h1>
-		</div>
+
+	<div class="skillsGrid">
+		{#each skillGroups as group}
+			<article class="skillCard visabilityHelper">
+				<h2>{group.title}</h2>
+				<div class="chips">
+					{#each group.items as item}
+						<span>{item}</span>
+					{/each}
+				</div>
+			</article>
+		{/each}
 	</div>
-	<div class="skillBadges visabilityHelper justify-end">
-		<a href="https://nodejs.org/en/" target="_blank"
-			><img src={nodejsIcon} alt="html icon" class="badgeVisabilityHelper" /></a
-		>
-		<a href="https://expressjs.com/" target="_blank"
-			><img src={expressIcon} alt="css icon" class="badgeVisabilityHelper" /></a
-		>
-		<a href="https://www.mongodb.com/" target="_blank"
-			><img src={mongodbIcon} alt="js icon" class="badgeVisabilityHelper" /></a
-		>
-		<a href="https://www.typescriptlang.org/" target="_blank"
-			><img src={typescriptIcon} alt="typescript Icon" /></a
-		>
-		<a href="https://pugjs.org/api/getting-started.html" target="_blank"
-			><img src={pugIcon} alt="react Icon" /></a
-		>
-	</div>
-	<div class="headingCenter largeMiddle">
-		<div>
-			<div class="horizontalLine" />
-		</div>
-		<div>
-			<h1 class=" skillTitle coolFont text-2xl">Technologies</h1>
-		</div>
-		<div>
-			<div class="horizontalLine" />
-		</div>
-	</div>
-	<div class="skillBadges visabilityHelper">
-		<a href="https://www.linux.org/" target="_blank"><img src={linuxIcon} alt="html icon" /></a>
-		<a href="https://git-scm.com/" target="_blank"><img src={gitIcon} alt="css icon" /></a>
-		<a href="https://github.com/" target="_blank"
-			><img src={githubIcon} alt="js icon" class="badgeVisabilityHelper" /></a
-		>
-		<a href="https://webpack.js.org/" target="_blank"
-			><img src={webpackIcon} alt="typescript Icon" /></a
-		>
-		<a href="https://www.adobe.com/products/illustrator.html" target="_blank"
-			><img src={adobeIllustratorIcon} alt="react Icon" /></a
-		>
-		<a href="https://redux.js.org/" target="_blank"><img src={reduxIcon} alt="react Icon" /></a>
-		<a href="https://jestjs.io/" target="_blank"><img src={jestIcon} alt="react Icon" /></a>
-		<a href="https://www.digitalocean.com/" target="_blank"
-			><img src={digitalOceanIcon} alt="react Icon" /></a
-		>
-		<a href="https://www.nginx.com/" target="_blank"><img src={nginxIcon} alt="react Icon" /></a>
-		<a href="https://letsencrypt.org/" target="_blank"
-			><img src={letsencryptIcon} alt="react Icon" class="badgeVisabilityHelper" /></a
-		>
-	</div>
-</div>
+</section>
 
 <style lang="postcss">
-	h1 {
-		color: white;
-	}
-	/* ---- fonts ----- */
-	.softText {
-		@apply text-xl lg:text-4xl;
-		font-family: softFont;
-	}
-	.fancyFont {
-		font-family: NameFont1;
-	}
-	/* ------- skills head ----- */
-	.skillHeading {
-		display: grid;
-		grid-template-columns: 10rem 1fr;
-	}
-	.skillHeadingReverse {
-		@apply mt-3;
-		display: grid;
-		grid-template-columns: 1fr 10rem;
-		grid-template-rows: 1fr;
-	}
-	.backend {
-		grid-column: 3 / 4;
-	}
-	.skillHeadingReverse > div,
-	.headingCenter > div {
-		@apply flex justify-center items-center;
-	}
-	.headBottom {
-		@apply flex justify-end mt-3 text-lg lg:text-3xl;
-		font-family: NameFont1;
-		/* text-decoration: underline;
-		text-decoration-color: white;
-		text-decoration-thickness: 2px; */
-		text-align: right;
-	}
-	/* ------- skills title ----- */
-	.skillsTitle {
-		@apply text-xl mt-10 mb-3 lg:text-2xl;
-	}
-	.skillTitle {
-		@apply lg:text-5xl;
-	}
-	/* ------- skills body ----- */
-	.skillBadges {
-		@apply lg:mt-8;
-		display: flex;
-		gap: 1rem;
-		padding: 10px;
-		width: 100%;
-		overflow: scroll;
-		overflow-y: hidden;
-		/* background-color: rgba(214, 154, 250, 0.415); */
-	}
-	.skillBadges::-webkit-scrollbar {
-		background-color: rgba(255, 255, 255, 0);
-		height: 1vh;
-	}
-	.skillBadges::-webkit-scrollbar-thumb {
-		border-radius: 10px;
-		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-		background-color: #c6a0fe;
-		border: 1px solid #000;
-	}
-	/* ------ icons ----- */
-	a {
-		@apply lg:h-20 w-20 !important;
-		width: 40px;
-		height: 40px;
-		transition-duration: 0.4s;
-	}
-	a:hover {
-		transform: translateY(-10px);
-		transition-duration: 0.3s;
-	}
-	img {
-		@apply lg:h-20 w-20 !important;
-		min-width: 40px;
-		height: 40px;
-	}
-	/* ------ lg styling ------- */
-	.largeLeft {
-		@apply lg:grid-cols-lg_left pt-4 ml-3 !important;
-	}
-	.largeRight {
-		@apply lg:grid-cols-lg_right mt-10 !important;
-	}
-	.smHide {
-		@apply hidden lg:block;
-	}
+	section { color: white; }
+	.hero { @apply p-5 lg:p-10 mb-12; border: 1px solid rgba(215, 154, 250, 0.35); }
+	.eyebrow { @apply text-xs lg:text-sm mb-3 tracking-widest; color: #d7a0fa; font-family: softFont; }
+	.softText { @apply text-3xl lg:text-5xl max-w-4xl; font-family: softFont; line-height: 1.15; }
+	.heroCopy { @apply mt-5 lg:text-xl max-w-4xl; font-family: softFont; line-height: 1.7; color: rgba(255,255,255,0.9); }
+	.focusRow { @apply flex flex-wrap gap-2 mt-6; }
+	.focusRow span { @apply px-3 py-1 rounded-full text-sm; font-family: softFont; background: rgba(0,128,128,0.45); border: 1px solid rgba(255,255,255,0.25); }
+	.sectionHeading { @apply mb-5; }
+	.sectionHeading h1 { @apply text-4xl lg:text-5xl text-center; }
+	.skillsGrid { @apply grid md:grid-cols-2 xl:grid-cols-3 gap-5 mb-16; }
+	.skillCard { @apply p-5 lg:p-6; background-color: rgba(0,0,0,0.26); border: 1px solid rgba(215,154,250,0.3); transition: transform 0.25s ease, border-color 0.25s ease; }
+	.skillCard:hover { transform: translateY(-4px); border-color: rgba(240,37,37,0.65); }
+	h2 { @apply text-2xl mb-4; font-family: softFont; color: white; }
+	.chips { @apply flex flex-wrap gap-2; }
+	.chips span { @apply px-3 py-2 rounded-lg text-sm; font-family: softFont; background: rgba(255,255,255,0.08); border-left: 3px solid var(--BellRed); }
 </style>
