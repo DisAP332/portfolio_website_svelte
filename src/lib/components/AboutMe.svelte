@@ -8,24 +8,25 @@
 	<div class="aboutGrid visabilityHelper">
 		<div>
 			<p>
-				I like working with technology from more than one angle. I build software, troubleshoot computers and servers,
-				work with Linux and networks, and spend a lot of my own time learning how the pieces connect.
+				I am a technician and developer with experience in hardware and software diagnostics, IT support, Linux,
+				networking, and web development. My work has included production server troubleshooting, workstation deployments,
+				end-user support, and building practical software projects.
 			</p>
 			<p>
-				A lot of what I know came from having a problem in front of me and needing to figure it out. I have diagnosed
-				production server hardware, upgraded hundreds of workstations, supported users, built full-stack web apps,
-				and put together my own home lab so I always have something new to work on.
+				I approach technical problems methodically: identify the issue, use available documentation and tools, test the most
+				likely causes, and verify the result. I am continuing to build my skills in networking, cybersecurity, systems, and
+				software while looking for roles where strong troubleshooting and dependable technical work are valuable.
 			</p>
 		</div>
 		<div class="quickFacts">
-			<h2>A few things about my work</h2>
+			<h2>Technical background</h2>
 			<ul>
 				<li>CompTIA A+</li>
 				<li>Google Cybersecurity Professional Certificate</li>
 				<li>Hardware and software troubleshooting</li>
 				<li>Linux, networking and virtualization</li>
 				<li>Full-stack development and automation</li>
-				<li>I learn best by building and fixing things</li>
+				<li>Production diagnostics and end-user support</li>
 			</ul>
 		</div>
 	</div>
